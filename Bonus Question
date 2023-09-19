@@ -1,4 +1,4 @@
-# Yes, Using Pandas we can calculate correlation using in-built functions. 
+# Yes, Using Pandas we can calculate correlation and using Sci-Py we can calculate all three using in-built functions. 
 
 import numpy as np
 import pandas as pd
