@@ -1,0 +1,30 @@
+import numpy as np
+import pandas as pd
+from scipy.spatial.distance import cosine, euclidean
+from scipy.stats import pearsonr
+
+# Generating 2 random vectors
+vec_len = 5
+vecA = np.random.rand(vec_len)
+vecB = np.random.rand(vec_len)
+
+# Calculation of correlation with SciPy
+corr, _ = pearsonr(vecA, vecB)
+
+# Calculation of cosine similarity with SciPy
+cosine_similarity = 1 - cosine(vecA, vecB)
+
+# Calculate Euclidean distance using SciPy
+euclid_dist = euclidean(vecA, vecB)
+
+# Convertion of vectors to Pandas Series for calculation of correlation using Pandas
+set1 = pd.Series(vecA)
+set2 = pd.Series(vecB)
+correlation_pandas = set1.corr(set2)
+
+print("Vector A:", vecA)
+print("Vector B:", vecB)
+print("Correlation (SciPy):", corr)
+print("Cosine Similarity (SciPy):", cosine_similarity)
+print("Euclidean Distance (SciPy):", euclid_dist)
+print("Correlation (Pandas):", correlation_pandas)
