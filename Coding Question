@@ -1,0 +1,35 @@
+import numpy as np
+
+# For calculating correlation coefficient :
+def cal_corr(vecA, vecB):
+    corr = np.corrcoef(vecA, vecB)[0, 1]
+    return corr
+
+# For calculating cosine similarity
+def cal_cosine_similarity(vecA, vecB):
+    dot_product = np.dot(vecA, vecB)
+    norm_vecA = np.linalg.norm(vecA)
+    norm_vecB = np.linalg.norm(vecB)
+    cosine_similarity = dot_product / (norm_vecA * norm_vecB)
+    return cosine_similarity
+
+# For calculating Euclidean distance
+def cal_euclid_dist(vecA, vecB):
+    euclid_dist = np.linalg.norm(vecA - vecB)
+    return euclid_dist
+
+# Generating the random input vectors
+vec_len = 6  
+vecA = np.random.rand(vec_len)
+vecB = np.random.rand(vec_len)
+
+# Calculating all 3
+corr = cal_corr(vecA, vecB)
+cosine_similarity = cal_cosine_similarity(vecA, vecB)
+euclid_dist = cal_euclid_dist(vecA, vecB)
+
+print("Vec A:", vecA)
+print("Vec B:", vecB)
+print("Correlation:", corr)
+print("Cosine Similarity:", cosine_similarity)
+print("Euclidean Distance:", euclid_dist)
