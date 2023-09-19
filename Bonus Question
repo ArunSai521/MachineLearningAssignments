@@ -1,3 +1,5 @@
+# Yes, Both SciPy and Pandas provide functions to calculate correlation, cosine similarity, and Euclidean distance.
+
 import numpy as np
 import pandas as pd
 from scipy.spatial.distance import cosine, euclidean
@@ -24,7 +26,7 @@ correlation_pandas = set1.corr(set2)
 
 print("Vector A:", vecA)
 print("Vector B:", vecB)
-print("Correlation (SciPy):", corr)
-print("Cosine Similarity (SciPy):", cosine_similarity)
-print("Euclidean Distance (SciPy):", euclid_dist)
-print("Correlation (Pandas):", correlation_pandas)
+print("Correlation using SciPy:", corr)
+print("Cosine Similarity using SciPy:", cosine_similarity)
+print("Euclidean Distance using SciPy:", euclid_dist)
+print("Correlation using Pandas:", correlation_pandas)
