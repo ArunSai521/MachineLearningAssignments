@@ -1,4 +1,4 @@
-# Yes, Both SciPy and Pandas provide functions to calculate correlation, cosine similarity, and Euclidean distance.
+# Yes, Using Pandas we can calculate correlation using in-built functions. 
 
 import numpy as np
 import pandas as pd
